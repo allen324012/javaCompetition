@@ -17,4 +17,4 @@ public static void printStairs(int n) {
 
 }
 
-![金字塔](java100/1.jpg)
+
