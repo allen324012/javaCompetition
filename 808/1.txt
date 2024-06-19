@@ -1,0 +1,75 @@
+﻿class Base {
+    // insert code here
+}
+ 
+public class Derived extends Base {
+ 
+    public static void main(String[] args) {
+        Derived obj = new Derived();
+        obj.setNum(3);
+        System.out.println("Square = " + obj.getNum() * obj.getNum());
+    }
+}
+Which two options, when inserted independently inside class Base, ensure that the class is being properly encapsulated and allow the program to execute and print the square of the number?
+
+A.
+
+private int num;
+ 
+public int getNum() {
+    return num;
+}
+ 
+public void setNum(int num) {
+    this.num = num;
+}
+B.
+public int num;
+ 
+protected public int getNum() {
+    return num;
+}
+ 
+protected public void setNum(int num) {
+    this.num = num;
+}
+C.
+private int num;
+ 
+public int getNum() {
+    return num;
+}
+ 
+private void setNum(int num) {
+    this.num = num;
+}
+D.
+protected int num;
+ 
+public int getNum() {
+    return num;
+}
+ 
+public void setNum(int num) {
+    this.num = num;
+}
+E.
+protected int num;
+ 
+private int getNum() {
+    return num;
+}
+ 
+public void setNum(int num) {
+    this.num = num;
+}
+題解
+選項A，標準的封裝作法。
+
+選項B，protected和public不可以同時使用，會造成編譯錯誤。
+
+選項C，應將setNum方法的可見度修飾字改為public。
+
+選項D，標準的封裝作法，支援不同套件下的欄位繼承。
+
+選項E，應將getNum方法的可見度修飾字改為public。
